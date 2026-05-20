@@ -63,21 +63,19 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
   const [selectedPaymentEntry, setSelectedPaymentEntry] = useState<any>(null)
   const { kycStatus, openKycPromptModal } = useKyc()
 
-  const [withdrawalHistory, setWithdrawalHistory] = useState<WithdrawalDetails[]>([])
+  const [withdrawalHistory, setWithdrawalHistory] = useState<WithdrawalDetails[]>([
+    {
+      id: "wd-1",
+      date: "16-05-2026",
+      method: "Payoneer",
+      amount: "$678.33",
+      status: "Pending",
+      accountEmail: "abdul.rehman.soashraf@gmail.com",
+      processingTime: "8-10 Business Days",
+    },
+  ])
 
   const [paymentMethods, setPaymentMethods] = useState<PaymentMethodData[]>([
-    {
-      id: "pm-1",
-      type: "payoneer",
-      accountHolderName: "Shahid Usman",
-      email: "shahidusman7862@gmail.com",
-      country: "Pakistan",
-      currency: "USD",
-      status: "Active",
-      isDefault: true,
-      priority: 1,
-      addedDate: "Jan 15, 2026",
-    },
     {
       id: "pm-2",
       type: "payoneer",
@@ -86,8 +84,8 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       country: "Pakistan",
       currency: "USD",
       status: "Active",
-      isDefault: false,
-      priority: 2,
+      isDefault: true,
+      priority: 1,
       addedDate: "May 20, 2026",
     },
   ])
@@ -147,8 +145,8 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
     return () => clearInterval(interval)
   }, [withdrawalHistory])
 
-  const availableBalance = 1273.52
-  const pendingBalance = 0
+  const availableBalance = 595.19
+  const pendingBalance = 678.33
   const totalEarnings = 0
   const totalPayments = 0
   const thisMonthEarnings = 0
