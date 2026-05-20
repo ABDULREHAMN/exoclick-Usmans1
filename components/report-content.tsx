@@ -9,6 +9,12 @@ const reportData = {
   "This Month": {
     "All Countries": {
       "All Devices": [
+        { date: "20-May-2026", impressions: "4532", clicks: "199", ctr: "4.39%", ecpm: "$83.22", revenue: "$34.44" },
+        { date: "19-May-2026", impressions: "12274", clicks: "344", ctr: "2.80%", ecpm: "$82.88", revenue: "$80.66" },
+        { date: "18-May-2026", impressions: "12282", clicks: "343", ctr: "2.79%", ecpm: "$82.44", revenue: "$80.01" },
+        { date: "17-May-2026", impressions: "12294", clicks: "342", ctr: "2.78%", ecpm: "$82.11", revenue: "$79.55" },
+        { date: "16-May-2026", impressions: "12301", clicks: "341", ctr: "2.77%", ecpm: "$81.66", revenue: "$79.11" },
+        { date: "15-May-2026", impressions: "12323", clicks: "340", ctr: "2.76%", ecpm: "$81.22", revenue: "$78.88" },
         { date: "14-May-2026", impressions: "12602", clicks: "347", ctr: "2.75%", ecpm: "$84.11", revenue: "$84.33" },
         { date: "13-May-2026", impressions: "12543", clicks: "345", ctr: "2.75%", ecpm: "$83.22", revenue: "$82.11" },
         { date: "12-May-2026", impressions: "12501", clicks: "345", ctr: "2.76%", ecpm: "$82.88", revenue: "$81.22" },
@@ -126,11 +132,11 @@ const reportData = {
 }
 
 const statisticsTotals = {
-  impressions: 146545,
-  clicks: 4005,
-  revenue: 840.87,
-  ecpm: 58.91,
-  ctr: 2.73,
+  impressions: 220571,
+  clicks: 5914,
+  revenue: 1273.52,
+  ecpm: 74.66,
+  ctr: 2.68,
 }
 
 export function ReportContent() {

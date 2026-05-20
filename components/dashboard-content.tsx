@@ -81,9 +81,9 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
 
   const availableBalance = 0
   const pendingBalance = 0
-  const thisMonthEarnings = 840.87
+  const thisMonthEarnings = 1273.52
   const totalPayments = 0
-  const totalEarnings = 840.87
+  const totalEarnings = 1273.52
   const nextWithdrawalDate = ""
 
   const allReportData = [
@@ -102,42 +102,48 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
     { date: "12-May-2026", impressions: 12501, clicks: 345, revenue: 81.22, ctr: "2.76%", ecpm: "82.88" },
     { date: "13-May-2026", impressions: 12543, clicks: 345, revenue: 82.11, ctr: "2.75%", ecpm: "83.22" },
     { date: "14-May-2026", impressions: 12602, clicks: 347, revenue: 84.33, ctr: "2.75%", ecpm: "84.11" },
+    { date: "15-May-2026", impressions: 12323, clicks: 340, revenue: 78.88, ctr: "2.76%", ecpm: "81.22" },
+    { date: "16-May-2026", impressions: 12301, clicks: 341, revenue: 79.11, ctr: "2.77%", ecpm: "81.66" },
+    { date: "17-May-2026", impressions: 12294, clicks: 342, revenue: 79.55, ctr: "2.78%", ecpm: "82.11" },
+    { date: "18-May-2026", impressions: 12282, clicks: 343, revenue: 80.01, ctr: "2.79%", ecpm: "82.44" },
+    { date: "19-May-2026", impressions: 12274, clicks: 344, revenue: 80.66, ctr: "2.80%", ecpm: "82.88" },
+    { date: "20-May-2026", impressions: 4532, clicks: 199, revenue: 34.44, ctr: "4.39%", ecpm: "83.22" },
   ]
 
   const recentActivityData = [
+    { date: "20-May-2026", impressions: 4532, clicks: 199, revenue: 34.44, ctr: "4.39%", ecpm: "83.22" },
+    { date: "19-May-2026", impressions: 12274, clicks: 344, revenue: 80.66, ctr: "2.80%", ecpm: "82.88" },
+    { date: "18-May-2026", impressions: 12282, clicks: 343, revenue: 80.01, ctr: "2.79%", ecpm: "82.44" },
+    { date: "17-May-2026", impressions: 12294, clicks: 342, revenue: 79.55, ctr: "2.78%", ecpm: "82.11" },
+    { date: "16-May-2026", impressions: 12301, clicks: 341, revenue: 79.11, ctr: "2.77%", ecpm: "81.66" },
+    { date: "15-May-2026", impressions: 12323, clicks: 340, revenue: 78.88, ctr: "2.76%", ecpm: "81.22" },
     { date: "14-May-2026", impressions: 12602, clicks: 347, revenue: 84.33, ctr: "2.75%", ecpm: "84.11" },
     { date: "13-May-2026", impressions: 12543, clicks: 345, revenue: 82.11, ctr: "2.75%", ecpm: "83.22" },
     { date: "12-May-2026", impressions: 12501, clicks: 345, revenue: 81.22, ctr: "2.76%", ecpm: "82.88" },
     { date: "11-May-2026", impressions: 12488, clicks: 344, revenue: 80.01, ctr: "2.75%", ecpm: "82.11" },
-    { date: "10-May-2026", impressions: 12455, clicks: 343, revenue: 79.22, ctr: "2.75%", ecpm: "81.22" },
-    { date: "09-May-2026", impressions: 12402, clicks: 343, revenue: 78.44, ctr: "2.77%", ecpm: "80.44" },
-    { date: "08-May-2026", impressions: 12388, clicks: 342, revenue: 77.12, ctr: "2.76%", ecpm: "79.11" },
-    { date: "07-May-2026", impressions: 12321, clicks: 341, revenue: 76.33, ctr: "2.77%", ecpm: "78.33" },
-    { date: "06-May-2026", impressions: 7282, clicks: 242, revenue: 36.33, ctr: "3.32%", ecpm: "36.22" },
-    { date: "05-May-2026", impressions: 7152, clicks: 240, revenue: 33.28, ctr: "3.36%", ecpm: "29.44" },
   ]
 
   const latestActivity = {
-    date: "14-May-2026",
-    revenue: 84.33,
-    impressions: 12602,
-    clicks: 347,
-    ctr: "2.75%",
-    ecpm: "84.11",
+    date: "20-May-2026",
+    revenue: 34.44,
+    impressions: 4532,
+    clicks: 199,
+    ctr: "4.39%",
+    ecpm: "83.22",
   }
 
-  const todayRevenue = 84.33
-  const todayImpressions = 12602
-  const todayClicks = 347
-  const todayCTR = "2.75"
-  const todayECPM = "84.11"
+  const todayRevenue = 34.44
+  const todayImpressions = 4532
+  const todayClicks = 199
+  const todayCTR = "4.39"
+  const todayECPM = "83.22"
 
   const hourlyData = []
 
   const todayTotals = {
-    impressions: 12602,
-    clicks: 347,
-    revenue: 84.33,
+    impressions: 4532,
+    clicks: 199,
+    revenue: 34.44,
   }
 
   // This ensures all data aggregates to locked totals: $4,819.23 revenue, 32,687 clicks, 567,531 impressions
