@@ -24,14 +24,14 @@ export function ProfilePage({ onBack }: ProfilePageProps) {
   const { kycStatus, verificationDate, kycReference, fullName } = useKyc()
   const [isEditing, setIsEditing] = useState(false)
   const [profileData, setProfileData] = useState({
-    fullName: "Shahid",
-    email: "shahid2233@gmail.com",
+    fullName: "Shahid Usman",
+    email: "shahidusman7862@gmail.com",
     username: "shahid2233",
     company: "",
     phone: "",
     address: "",
     bio: "",
-    website: "https://techblogi.com/",
+    website: "http://techjoni.com/",
     joinDate: "January 13, 2026",
   })
 
