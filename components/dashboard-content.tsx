@@ -84,7 +84,7 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
   const thisMonthEarnings = 1273.52
   const totalPayments = 0
   const totalEarnings = 1273.52
-  const nextWithdrawalDate = ""
+  const nextWithdrawalDate = "02-06-2026"
 
   const allReportData = [
     { date: "30-Apr-2026", impressions: 6753, clicks: 231, revenue: 23, ctr: "3.42%", ecpm: "15.00" },
