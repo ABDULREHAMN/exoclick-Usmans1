@@ -28,15 +28,15 @@ interface PaymentMethod {
 export function PaymentMethods() {
   const [paymentMethods, setPaymentMethods] = useState<PaymentMethod[]>([
     {
-      id: "pm_1",
+      id: "pm_2",
       type: "payoneer",
       displayName: "Payoneer",
       details: "abdul.rehman.soashraf@gmail.com",
       verified: true,
       isDefault: true,
-      addedDate: "Oct 1, 2025",
+      addedDate: "May 20, 2026",
       icon: "payoneer",
-      network: "Abdul Rehman",
+      network: "Payoneer",
       status: "active",
     },
   ])
