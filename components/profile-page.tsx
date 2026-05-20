@@ -32,7 +32,7 @@ export function ProfilePage({ onBack }: ProfilePageProps) {
     address: "",
     bio: "",
     website: "http://techjoni.com/",
-    joinDate: "January 13, 2026",
+    joinDate: "30 April 2026",
   })
 
   const handleSave = () => {
