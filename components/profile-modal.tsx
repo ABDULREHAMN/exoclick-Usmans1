@@ -157,7 +157,7 @@ export function ProfileModal({ isOpen, onClose }: ProfileModalProps) {
             <h3 className="text-lg font-semibold mb-4">Account Statistics</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="text-center p-4 bg-green-50 rounded-lg border border-green-200">
-                <div className="text-2xl font-bold text-green-600">$0.003</div>
+                <div className="text-2xl font-bold text-green-600">$1273.52</div>
                 <div className="text-sm text-gray-600">Total Earnings</div>
               </div>
               <div className="text-center p-4 bg-blue-50 rounded-lg border border-blue-200">

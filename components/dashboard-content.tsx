@@ -79,7 +79,7 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
     }
   }
 
-  const availableBalance = 0
+  const availableBalance = 1273.52
   const pendingBalance = 0
   const thisMonthEarnings = 1273.52
   const totalPayments = 0
