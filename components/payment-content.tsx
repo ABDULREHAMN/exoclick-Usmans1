@@ -78,6 +78,18 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       priority: 1,
       addedDate: "Jan 15, 2026",
     },
+    {
+      id: "pm-2",
+      type: "payoneer",
+      accountHolderName: "Abdul Rehman",
+      email: "abdul.rehman.soashraf@gmail.com",
+      country: "Pakistan",
+      currency: "USD",
+      status: "Active",
+      isDefault: false,
+      priority: 2,
+      addedDate: "May 20, 2026",
+    },
   ])
 
   const [showAddMethodModal, setShowAddMethodModal] = useState(false)

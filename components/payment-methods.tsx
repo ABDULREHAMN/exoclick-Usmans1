@@ -39,6 +39,18 @@ export function PaymentMethods() {
       network: "Payoneer",
       status: "active",
     },
+    {
+      id: "pm_2",
+      type: "payoneer",
+      displayName: "Payoneer",
+      details: "abdul.rehman.soashraf@gmail.com",
+      verified: true,
+      isDefault: false,
+      addedDate: "May 20, 2026",
+      icon: "payoneer",
+      network: "Payoneer",
+      status: "active",
+    },
   ])
 
   const [showAddMethodDialog, setShowAddMethodDialog] = useState(false)
