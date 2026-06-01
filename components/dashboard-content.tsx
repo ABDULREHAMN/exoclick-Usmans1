@@ -1210,7 +1210,7 @@ ${exportData.map((d) => `${d.Date} | Revenue: ${d.Revenue} | Impressions: ${d.Im
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
         <StatsCard title="TODAY" value={`$${todayTotals.revenue.toFixed(2)}`} />
         <StatsCard title="THIS MONTH" value={`$${thisMonthEarnings.toFixed(3)}`} />
-        <StatsCard title="LAST MONTH" value="$0.00" />
+        <StatsCard title="LAST MONTH" value="$2245.12" />
         <StatsCard
           title="THIS MONTH FORECAST"
           value="$0.00"
@@ -1219,7 +1219,7 @@ ${exportData.map((d) => `${d.Date} | Revenue: ${d.Revenue} | Impressions: ${d.Im
             color: "bg-gray-500",
           }}
         />
-        <StatsCard title="LAST 6 MONTHS" value={`$${totalEarnings.toFixed(3)}`} />
+        <StatsCard title="LAST 6 MONTHS" value="$2300.46" />
       </div>
 
       {/* Action Buttons */}
