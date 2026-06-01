@@ -98,7 +98,6 @@ const reportData = {
       ],
     },
   },
-  },
   "Last 3 Months": {
     "All Countries": {
       "All Devices": [
