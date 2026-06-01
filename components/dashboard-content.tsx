@@ -1213,10 +1213,10 @@ ${exportData.map((d) => `${d.Date} | Revenue: ${d.Revenue} | Impressions: ${d.Im
         <StatsCard title="LAST MONTH" value="$2245.12" />
         <StatsCard
           title="THIS MONTH FORECAST"
-          value="$0.00"
+          value="$2314.33"
           badge={{
-            text: "0%",
-            color: "bg-gray-500",
+            text: "89%",
+            color: "bg-green-500",
           }}
         />
         <StatsCard title="LAST 6 MONTHS" value="$2300.46" />
