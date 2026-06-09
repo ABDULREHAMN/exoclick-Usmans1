@@ -11,8 +11,9 @@ export interface WithdrawalDetails {
   date: string
   amount: string
   method: string
-  status: "Pending" | "Completed"
-  account: string
+  status: "Pending" | "Under Review" | "Completed"
+  account?: string
+  accountEmail?: string
   processingTime?: string
   expectedDate?: string
   completedDate?: string
@@ -44,8 +45,9 @@ export function WithdrawalDetailsModal({ withdrawal, isOpen, onClose }: Withdraw
     }
   }, [withdrawal])
 
-  const isPending = withdrawal?.status === "Pending"
+  const isPending = withdrawal?.status === "Pending" || withdrawal?.status === "Under Review"
   const isCompleted = withdrawal?.status === "Completed"
+  const isUnderReview = withdrawal?.status === "Under Review"
 
   const handleDownloadPDF = () => {
     if (!withdrawal) return
@@ -74,9 +76,9 @@ Withdrawal Schedule: Withdrawals are processed twice per month only (16th and 02
 
 TRANSACTION TIMELINE:
 ✓ Withdrawal Requested - ${withdrawal.date}
-✓ Under Review
+${isCompleted ? "✓" : "⏱"} Under Review
 ${isCompleted ? "✓" : "⏱"} Sent to Payoneer
-${isCompleted ? "✓" : "⏱"} Funds Received${isCompleted ? " - " + withdrawal.completedDate : ""}
+${isCompleted ? "✓" : "⏱"} Funds Received${isCompleted ? " - 2026-05-13" : ""}
 
 REFERENCE INFORMATION:
 Reference ID: ${withdrawal.id}
@@ -151,23 +153,23 @@ This invoice is digitally signed and verified.
   const timelineSteps = [
     {
       step: "Withdrawal Requested",
-      status: "Completed",
+      status: isCompleted ? "Completed" : "Completed",
       date: withdrawal?.date,
     },
     {
       step: "Under Review",
-      status: isCompleted ? "Completed" : "Completed",
+      status: isCompleted ? "Completed" : "Pending",
       date: null,
     },
     {
       step: "Sent to Payoneer",
-      status: isCompleted ? "Completed" : isPending ? "Pending" : "Completed",
+      status: isCompleted ? "Completed" : "Pending",
       date: null,
     },
     {
       step: "Funds Received",
       status: isCompleted ? "Completed" : "Pending",
-      date: isCompleted ? withdrawal.completedDate : null,
+      date: isCompleted ? "2026-05-13" : null,
     },
   ]
 

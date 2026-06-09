@@ -35,7 +35,7 @@ export function TopNavbar({ onNavigate }: TopNavbarProps) {
 
   const getBalanceDisplay = () => {
     if (currentRole === "Advertiser") {
-      return { label: "Balance", value: "$1680.43" }
+      return { label: "Balance", value: "$496.54" }
     }
     return null
   }
