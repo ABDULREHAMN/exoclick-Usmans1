@@ -566,9 +566,11 @@ Generated on: ${new Date().toLocaleDateString()}
                                 className={
                                   withdrawal.status === "Completed"
                                     ? "bg-green-100 text-green-800"
-                                    : withdrawal.status === "Pending"
-                                      ? "bg-orange-100 text-orange-800"
-                                      : "bg-gray-100 text-gray-800"
+                                    : withdrawal.status === "Under Review"
+                                      ? "bg-blue-100 text-blue-800"
+                                      : withdrawal.status === "Pending"
+                                        ? "bg-orange-100 text-orange-800"
+                                        : "bg-gray-100 text-gray-800"
                                 }
                               >
                                 {withdrawal.status}
