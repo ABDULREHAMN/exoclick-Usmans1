@@ -11,8 +11,9 @@ export interface WithdrawalDetails {
   date: string
   amount: string
   method: string
-  status: "Pending" | "Completed"
-  account: string
+  status: "Pending" | "Under Review" | "Completed"
+  account?: string
+  accountEmail?: string
   processingTime?: string
   expectedDate?: string
   completedDate?: string
@@ -44,8 +45,9 @@ export function WithdrawalDetailsModal({ withdrawal, isOpen, onClose }: Withdraw
     }
   }, [withdrawal])
 
-  const isPending = withdrawal?.status === "Pending"
+  const isPending = withdrawal?.status === "Pending" || withdrawal?.status === "Under Review"
   const isCompleted = withdrawal?.status === "Completed"
+  const isUnderReview = withdrawal?.status === "Under Review"
 
   const handleDownloadPDF = () => {
     if (!withdrawal) return

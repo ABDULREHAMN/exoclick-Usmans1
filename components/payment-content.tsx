@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import {
   Wallet,
   Mail,
@@ -74,13 +74,14 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       processingTime: "10–12 Business Days",
       grossAmount: "$678.33",
       tax: "$0.00",
+      completedDate: "09-06-2026",
     },
     {
       id: "wd-2",
       date: "05-06-2026",
       method: "Payoneer",
       amount: "$1030.98",
-      status: "Pending",
+      status: "Under Review",
       accountEmail: "abdul.rehman.soashraf@gmail.com",
       processingTime: "10–12 Business Days",
       grossAmount: "$1030.98",
@@ -119,44 +120,14 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
     confirmChecked: false,
   })
 
-  useEffect(() => {
-    const checkPendingWithdrawals = () => {
-      const now = new Date()
-      const updatedHistory = withdrawalHistory.map((withdrawal) => {
-        if (withdrawal.status === "Pending" && withdrawal.method === "Payoneer") {
-          const withdrawalDate = new Date(withdrawal.date)
-          const daysPassed = Math.floor((now.getTime() - withdrawalDate.getTime()) / (1000 * 60 * 60 * 24))
-
-          if (daysPassed >= 8) {
-            // Auto-complete after 8 days
-            const completedDate = new Date(withdrawalDate)
-            completedDate.setDate(completedDate.getDate() + 8)
-
-            return {
-              ...withdrawal,
-              status: "Completed" as const,
-              completedDate: completedDate.toISOString().split("T")[0],
-            }
-          }
-        }
-        return withdrawal
-      })
-
-      // Check if any status changed
-      const hasChanges = updatedHistory.some((w, i) => w.status !== withdrawalHistory[i].status)
-      if (hasChanges) {
-        setWithdrawalHistory(updatedHistory)
-        // System notification (no UI change, just console log)
-        console.log("[v0] Your Payoneer withdrawal has been completed successfully.")
-      }
-    }
-
-    // Check on mount and every hour
-    checkPendingWithdrawals()
-    const interval = setInterval(checkPendingWithdrawals, 60 * 60 * 1000)
-
-    return () => clearInterval(interval)
-  }, [withdrawalHistory])
+  // Withdrawal system configured for manual-only control
+  // All status changes require explicit admin confirmation
+  // No automatic completion based on elapsed time
+  const withdrawalSystemConfig = {
+    autoCompletion: false,
+    manualControlOnly: true,
+    keepUnderReviewUntilManualCommand: true,
+  }
 
   const availableBalance = 496.54
   const pendingBalance = 1030.98
