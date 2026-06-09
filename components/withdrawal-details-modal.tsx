@@ -74,9 +74,9 @@ Withdrawal Schedule: Withdrawals are processed twice per month only (16th and 02
 
 TRANSACTION TIMELINE:
 ✓ Withdrawal Requested - ${withdrawal.date}
-✓ Under Review
-✓ Sent to Payoneer
-✓ Funds Received - 2026-05-13
+${isCompleted ? "✓" : "⏱"} Under Review
+${isCompleted ? "✓" : "⏱"} Sent to Payoneer
+${isCompleted ? "✓" : "⏱"} Funds Received${isCompleted ? " - 2026-05-13" : ""}
 
 REFERENCE INFORMATION:
 Reference ID: ${withdrawal.id}
@@ -151,23 +151,23 @@ This invoice is digitally signed and verified.
   const timelineSteps = [
     {
       step: "Withdrawal Requested",
-      status: "Completed",
+      status: isCompleted ? "Completed" : "Completed",
       date: withdrawal?.date,
     },
     {
       step: "Under Review",
-      status: "Completed",
+      status: isCompleted ? "Completed" : "Pending",
       date: null,
     },
     {
       step: "Sent to Payoneer",
-      status: "Completed",
+      status: isCompleted ? "Completed" : "Pending",
       date: null,
     },
     {
       step: "Funds Received",
-      status: "Completed",
-      date: "2026-05-13",
+      status: isCompleted ? "Completed" : "Pending",
+      date: isCompleted ? "2026-05-13" : null,
     },
   ]
 
