@@ -79,11 +79,11 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
     }
   }
 
-  const availableBalance = 1527.52
-  const pendingBalance = 0
+  const availableBalance = 496.54
+  const pendingBalance = 1030.98
   const thisMonthEarnings = 639.77
   const totalPayments = 0
-  const totalEarnings = 2907.89
+  const totalEarnings = 2205.85
   const nextWithdrawalDate = "02-06-2026"
 
   const allReportData = [
@@ -663,7 +663,7 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
   }, [filteredReportData])
 
   // Display totals - use calculated when filters are active, otherwise use updated fixed totals
-  const displayTotalRevenue = dashboardDateRange !== null ? calculatedTotalRevenue : 2907.89
+  const displayTotalRevenue = dashboardDateRange !== null ? calculatedTotalRevenue : 2205.85
   const displayTotalClicks = dashboardDateRange !== null ? calculatedTotalClicks : 10396
   const displayTotalImpressions = dashboardDateRange !== null ? calculatedTotalImpressions : 367185
 

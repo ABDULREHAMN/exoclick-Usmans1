@@ -75,6 +75,17 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       grossAmount: "$678.33",
       tax: "$0.00",
     },
+    {
+      id: "wd-2",
+      date: "05-06-2026",
+      method: "Payoneer",
+      amount: "$1030.98",
+      status: "Pending",
+      accountEmail: "abdul.rehman.soashraf@gmail.com",
+      processingTime: "10–12 Business Days",
+      grossAmount: "$1030.98",
+      tax: "$0.00",
+    },
   ])
 
   const [paymentMethods, setPaymentMethods] = useState<PaymentMethodData[]>([
@@ -147,9 +158,9 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
     return () => clearInterval(interval)
   }, [withdrawalHistory])
 
-  const availableBalance = 1527.52
-  const pendingBalance = 0
-  const totalEarnings = 2907.89
+  const availableBalance = 496.54
+  const pendingBalance = 1030.98
+  const totalEarnings = 2205.85
   const totalPayments = 0
   const thisMonthEarnings = 639.77
   const nextWithdrawalDate = "02-06-2026"
