@@ -129,11 +129,11 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
     keepUnderReviewUntilManualCommand: true,
   }
 
-  const availableBalance = 496.54
+  const availableBalance = 1731.27
   const pendingBalance = 1030.98
-  const totalEarnings = 2205.85
+  const totalEarnings = 3112.97
   const totalPayments = 678.33
-  const thisMonthEarnings = 639.77
+  const thisMonthEarnings = 844.85
   const nextWithdrawalDate = "16-06-2026"
 
   const paymentEntries = []
