@@ -79,11 +79,11 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
     }
   }
 
-  const availableBalance = 1731.27
+  const availableBalance = 1956.97
   const pendingBalance = 1030.98
-  const thisMonthEarnings = 844.85
+  const thisMonthEarnings = 1070.55
   const totalPayments = 678.33
-  const totalEarnings = 3112.97
+  const totalEarnings = 3338.67
   const nextWithdrawalDate = "16-06-2026"
 
   const allReportData = [
@@ -123,33 +123,33 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
   ]
 
   const recentActivityData = [
-    { date: "10-Jun-2026", impressions: 3182, clicks: 196, revenue: 37.19, ctr: "6.17%", ecpm: "84.01" },
-    { date: "09-Jun-2026", impressions: 12902, clicks: 351, revenue: 83.56, ctr: "2.72%", ecpm: "83.09" },
-    { date: "08-Jun-2026", impressions: 12322, clicks: 365, revenue: 83.33, ctr: "2.96%", ecpm: "83.98" },
-    { date: "07-Jun-2026", impressions: 12322, clicks: 361, revenue: 82.98, ctr: "2.93%", ecpm: "83.66" },
+    { date: "13-Jun-2026", impressions: 3122, clicks: 187, revenue: 32.09, ctr: "5.99%", ecpm: "83.47" },
+    { date: "12-Jun-2026", impressions: 12398, clicks: 348, revenue: 83.87, ctr: "2.81%", ecpm: "82.99" },
+    { date: "11-Jun-2026", impressions: 12345, clicks: 346, revenue: 81.81, ctr: "2.80%", ecpm: "83.11" },
+    { date: "10-Jun-2026", impressions: 12768, clicks: 348, revenue: 80.12, ctr: "2.72%", ecpm: "81.34" },
   ]
 
   const latestActivity = {
-    date: "10-Jun-2026",
-    revenue: 37.19,
-    impressions: 3182,
-    clicks: 196,
-    ctr: "6.17%",
-    ecpm: "84.01",
+    date: "13-Jun-2026",
+    revenue: 32.09,
+    impressions: 3122,
+    clicks: 187,
+    ctr: "5.99%",
+    ecpm: "83.47",
   }
 
-  const todayRevenue = 37.19
-  const todayImpressions = 3182
-  const todayClicks = 196
-  const todayCTR = "6.17"
-  const todayECPM = "84.01"
+  const todayRevenue = 32.09
+  const todayImpressions = 3122
+  const todayClicks = 187
+  const todayCTR = "5.99"
+  const todayECPM = "83.47"
 
   const hourlyData = []
 
   const todayTotals = {
-    impressions: 3182,
-    clicks: 196,
-    revenue: 37.19,
+    impressions: 3122,
+    clicks: 187,
+    revenue: 32.09,
   }
 
   // This ensures all data aggregates to locked totals: $4,819.23 revenue, 32,687 clicks, 567,531 impressions
@@ -657,9 +657,9 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
   }, [filteredReportData])
 
   // Display totals - use calculated when filters are active, otherwise use updated fixed totals
-  const displayTotalRevenue = dashboardDateRange !== null ? calculatedTotalRevenue : 3112.97
-  const displayTotalClicks = dashboardDateRange !== null ? calculatedTotalClicks : 11139
-  const displayTotalImpressions = dashboardDateRange !== null ? calculatedTotalImpressions : 383707
+  const displayTotalRevenue = dashboardDateRange !== null ? calculatedTotalRevenue : 3338.67
+  const displayTotalClicks = dashboardDateRange !== null ? calculatedTotalClicks : 12163
+  const displayTotalImpressions = dashboardDateRange !== null ? calculatedTotalImpressions : 423462
 
   const calculateWeekOverWeekGrowth = () => {
     const dataToCalculate = dashboardDateRange ? filteredReportData : allReportData
@@ -1225,8 +1225,8 @@ ${exportData.map((d) => `${d.Date} | Revenue: ${d.Revenue} | Impressions: ${d.Im
         <StatsCard title="TODAY" value={`$${todayTotals.revenue.toFixed(2)}`} />
         <StatsCard title="THIS MONTH" value={`$${thisMonthEarnings.toFixed(3)}`} />
         <StatsCard title="LAST MONTH" value="$2245.12" />
-        <StatsCard title="THIS MONTH FORECAST" value="$844.85" badge={{ text: "89%", color: "bg-green-500" }} />
-        <StatsCard title="LAST 6 MONTHS" value="$3112.97" />
+        <StatsCard title="THIS MONTH FORECAST" value="$1070.55" badge={{ text: "89%", color: "bg-green-500" }} />
+        <StatsCard title="LAST 6 MONTHS" value="$3338.67" />
       </div>
 
       {/* Action Buttons */}
