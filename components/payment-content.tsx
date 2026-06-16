@@ -81,7 +81,7 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       date: "05-06-2026",
       method: "Payoneer",
       amount: "$1030.98",
-      status: "Under Review",
+      status: "Pending",
       accountEmail: "abdul.rehman.soashraf@gmail.com",
       processingTime: "10–12 Business Days",
       grossAmount: "$1030.98",
