@@ -81,10 +81,21 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       date: "05-06-2026",
       method: "Payoneer",
       amount: "$1030.98",
-      status: "Pending",
+      status: "Under Review",
       accountEmail: "abdul.rehman.soashraf@gmail.com",
       processingTime: "10–12 Business Days",
       grossAmount: "$1030.98",
+      tax: "$0.00",
+    },
+    {
+      id: "wd-3",
+      date: "16-06-2026",
+      method: "Payoneer",
+      amount: "$1345.77",
+      status: "Pending",
+      accountEmail: "abdul.rehman.soashraf@gmail.com",
+      processingTime: "12–14 Business Days",
+      grossAmount: "$1345.77",
       tax: "$0.00",
     },
   ])
@@ -129,12 +140,12 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
     keepUnderReviewUntilManualCommand: true,
   }
 
-  const availableBalance = 2208.37
-  const pendingBalance = 1030.98
+  const availableBalance = 862.60
+  const pendingBalance = 2376.75
   const totalEarnings = 3590.07
   const totalPayments = 678.33
   const thisMonthEarnings = 1321.95
-  const nextWithdrawalDate = "16-06-2026"
+  const nextWithdrawalDate = "05-07-2026"
 
   const paymentEntries = []
 
