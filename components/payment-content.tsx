@@ -93,10 +93,24 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       date: "16-06-2026",
       method: "Payoneer",
       amount: "$1345.77",
-      status: "Pending",
+      status: "Cancelled",
       accountEmail: "abdul.rehman.soashraf@gmail.com",
       processingTime: "12–14 Business Days",
       grossAmount: "$1345.77",
+      tax: "$0.00",
+      cancelledDate: "30-07-2026",
+      cancellationReason: "Cancelled by user",
+    },
+    {
+      id: "wd-4",
+      date: "30-07-2026",
+      method: "Crypto (BEP20)",
+      amount: "$2343.33",
+      status: "Pending",
+      walletAddress: "<YOUR_BEP20_WALLET_ADDRESS>",
+      walletNetwork: "BEP20",
+      processingTime: "10–14 Business Days",
+      grossAmount: "$2343.33",
       tax: "$0.00",
     },
   ])
@@ -142,7 +156,7 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
   }
 
   const availableBalance = 3895.38
-  const pendingBalance = 1345.77
+  const pendingBalance = 2343.33
   const totalEarnings = 5278.36
   const totalPayments = 1709.31
   const thisMonthEarnings = 247.92
