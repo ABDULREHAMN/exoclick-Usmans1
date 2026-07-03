@@ -79,11 +79,11 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
     }
   }
 
-  const availableBalance = 3648.49
+  const availableBalance = 3895.38
   const pendingBalance = 1345.77
-  const thisMonthEarnings = 4762.07
+  const thisMonthEarnings = 247.92
   const totalPayments = 1709.31
-  const totalEarnings = 5030.19
+  const totalEarnings = 5278.36
   const nextWithdrawalDate = "05-07-2026"
 
   const allReportData = [
@@ -123,33 +123,33 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
   ]
 
   const recentActivityData = [
-    { date: "29-Jun-2026", impressions: 4400, clicks: 195, revenue: 32.77, ctr: "4.43%", ecpm: "80.09" },
-    { date: "28-Jun-2026", impressions: 12995, clicks: 347, revenue: 83.99, ctr: "2.67%", ecpm: "83.05" },
-    { date: "27-Jun-2026", impressions: 12990, clicks: 345, revenue: 82.72, ctr: "2.66%", ecpm: "82.51" },
-    { date: "26-Jun-2026", impressions: 12985, clicks: 343, revenue: 81.45, ctr: "2.64%", ecpm: "81.98" },
+    { date: "04-Jul-2026", impressions: 404, clicks: 2, revenue: 1.03, ctr: "0.49%", ecpm: "82.67" },
+    { date: "03-Jul-2026", impressions: 12995, clicks: 347, revenue: 83.99, ctr: "2.67%", ecpm: "83.05" },
+    { date: "02-Jul-2026", impressions: 12992, clicks: 346, revenue: 83.14, ctr: "2.67%", ecpm: "82.74" },
+    { date: "01-Jul-2026", impressions: 12988, clicks: 345, revenue: 82.28, ctr: "2.66%", ecpm: "82.36" },
   ]
 
   const latestActivity = {
-    date: "29-Jun-2026",
-    revenue: 32.77,
-    impressions: 4400,
-    clicks: 195,
-    ctr: "4.43%",
-    ecpm: "80.09",
+    date: "04-Jul-2026",
+    revenue: 1.03,
+    impressions: 404,
+    clicks: 2,
+    ctr: "0.49%",
+    ecpm: "82.67",
   }
 
-  const todayRevenue = 32.77
-  const todayImpressions = 4400
-  const todayClicks = 195
-  const todayCTR = "4.43"
-  const todayECPM = "80.09"
+  const todayRevenue = 1.03
+  const todayImpressions = 404
+  const todayClicks = 2
+  const todayCTR = "0.49"
+  const todayECPM = "82.67"
 
   const hourlyData = []
 
   const todayTotals = {
-    impressions: 4400,
-    clicks: 195,
-    revenue: 32.77,
+    impressions: 404,
+    clicks: 2,
+    revenue: 1.03,
   }
 
   // This ensures all data aggregates to locked totals: $4,819.23 revenue, 32,687 clicks, 567,531 impressions
@@ -657,9 +657,9 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
   }, [filteredReportData])
 
   // Display totals - use calculated when filters are active, otherwise use updated fixed totals
-  const displayTotalRevenue = dashboardDateRange !== null ? calculatedTotalRevenue : 5030.19
-  const displayTotalClicks = dashboardDateRange !== null ? calculatedTotalClicks : 19254
-  const displayTotalImpressions = dashboardDateRange !== null ? calculatedTotalImpressions : 648070
+  const displayTotalRevenue = dashboardDateRange !== null ? calculatedTotalRevenue : 5278.36
+  const displayTotalClicks = dashboardDateRange !== null ? calculatedTotalClicks : 21134
+  const displayTotalImpressions = dashboardDateRange !== null ? calculatedTotalImpressions : 710438
 
   const calculateWeekOverWeekGrowth = () => {
     const dataToCalculate = dashboardDateRange ? filteredReportData : allReportData
@@ -1224,9 +1224,9 @@ ${exportData.map((d) => `${d.Date} | Revenue: ${d.Revenue} | Impressions: ${d.Im
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
         <StatsCard title="TODAY" value={`$${todayTotals.revenue.toFixed(2)}`} />
         <StatsCard title="THIS MONTH" value={`$${thisMonthEarnings.toFixed(3)}`} />
-        <StatsCard title="LAST MONTH" value="$2245.12" />
-        <StatsCard title="THIS MONTH FORECAST" value="$4762.07" badge={{ text: "89%", color: "bg-green-500" }} />
-        <StatsCard title="LAST 6 MONTHS" value="$5030.19" />
+        <StatsCard title="LAST MONTH" value="$5277.33" />
+        <StatsCard title="THIS MONTH FORECAST" value="$247.92" badge={{ text: "4.7%", color: "bg-green-500" }} />
+        <StatsCard title="LAST 6 MONTHS" value="$5278.36" />
       </div>
 
       {/* Action Buttons */}
