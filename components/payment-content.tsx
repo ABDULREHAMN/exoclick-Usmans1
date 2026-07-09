@@ -155,7 +155,7 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
     keepUnderReviewUntilManualCommand: true,
   }
 
-  const availableBalance = 3895.38
+  const availableBalance = 653.38
   const pendingBalance = 2343.33
   const totalEarnings = 5278.36
   const totalPayments = 1709.31
