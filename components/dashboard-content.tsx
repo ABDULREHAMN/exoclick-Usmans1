@@ -79,11 +79,11 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
     }
   }
 
-  const availableBalance = 3895.38
-  const pendingBalance = 1345.77
-  const thisMonthEarnings = 247.92
+  const availableBalance = 653.38
+  const pendingBalance = 2343.33
+  const thisMonthEarnings = 622.94
   const totalPayments = 1709.31
-  const totalEarnings = 5278.36
+  const totalEarnings = 5653.38
   const nextWithdrawalDate = "05-07-2026"
 
   const allReportData = [
@@ -123,33 +123,34 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
   ]
 
   const recentActivityData = [
-    { date: "04-Jul-2026", impressions: 404, clicks: 2, revenue: 1.03, ctr: "0.49%", ecpm: "82.67" },
-    { date: "03-Jul-2026", impressions: 12995, clicks: 347, revenue: 83.99, ctr: "2.67%", ecpm: "83.05" },
-    { date: "02-Jul-2026", impressions: 12992, clicks: 346, revenue: 83.14, ctr: "2.67%", ecpm: "82.74" },
-    { date: "01-Jul-2026", impressions: 12988, clicks: 345, revenue: 82.28, ctr: "2.66%", ecpm: "82.36" },
+    { date: "09-Jul-2026", impressions: 7514, clicks: 201, revenue: 42.06, ctr: "2.68%", ecpm: "83.11" },
+    { date: "08-Jul-2026", impressions: 12995, clicks: 347, revenue: 83.99, ctr: "2.67%", ecpm: "83.05" },
+    { date: "07-Jul-2026", impressions: 12993, clicks: 346, revenue: 83.35, ctr: "2.67%", ecpm: "82.81" },
+    { date: "06-Jul-2026", impressions: 12991, clicks: 345, revenue: 82.72, ctr: "2.66%", ecpm: "82.54" },
+    { date: "05-Jul-2026", impressions: 12988, clicks: 344, revenue: 82.08, ctr: "2.65%", ecpm: "82.26" },
   ]
 
   const latestActivity = {
-    date: "04-Jul-2026",
-    revenue: 1.03,
-    impressions: 404,
-    clicks: 2,
-    ctr: "0.49%",
-    ecpm: "82.67",
+    date: "09-Jul-2026",
+    revenue: 42.06,
+    impressions: 7514,
+    clicks: 201,
+    ctr: "2.68%",
+    ecpm: "83.11",
   }
 
-  const todayRevenue = 1.03
-  const todayImpressions = 404
-  const todayClicks = 2
-  const todayCTR = "0.49"
-  const todayECPM = "82.67"
+  const todayRevenue = 42.06
+  const todayImpressions = 7514
+  const todayClicks = 201
+  const todayCTR = "2.68"
+  const todayECPM = "83.11"
 
   const hourlyData = []
 
   const todayTotals = {
-    impressions: 404,
-    clicks: 2,
-    revenue: 1.03,
+    impressions: 7514,
+    clicks: 201,
+    revenue: 42.06,
   }
 
   // This ensures all data aggregates to locked totals: $4,819.23 revenue, 32,687 clicks, 567,531 impressions
@@ -657,9 +658,9 @@ export function DashboardContent({ onNavigate }: DashboardContentProps) {
   }, [filteredReportData])
 
   // Display totals - use calculated when filters are active, otherwise use updated fixed totals
-  const displayTotalRevenue = dashboardDateRange !== null ? calculatedTotalRevenue : 5278.36
-  const displayTotalClicks = dashboardDateRange !== null ? calculatedTotalClicks : 21134
-  const displayTotalImpressions = dashboardDateRange !== null ? calculatedTotalImpressions : 710438
+  const displayTotalRevenue = dashboardDateRange !== null ? calculatedTotalRevenue : 5653.38
+  const displayTotalClicks = dashboardDateRange !== null ? calculatedTotalClicks : 23410
+  const displayTotalImpressions = dashboardDateRange !== null ? calculatedTotalImpressions : 788952
 
   const calculateWeekOverWeekGrowth = () => {
     const dataToCalculate = dashboardDateRange ? filteredReportData : allReportData
@@ -1225,8 +1226,8 @@ ${exportData.map((d) => `${d.Date} | Revenue: ${d.Revenue} | Impressions: ${d.Im
         <StatsCard title="TODAY" value={`$${todayTotals.revenue.toFixed(2)}`} />
         <StatsCard title="THIS MONTH" value={`$${thisMonthEarnings.toFixed(3)}`} />
         <StatsCard title="LAST MONTH" value="$5277.33" />
-        <StatsCard title="THIS MONTH FORECAST" value="$247.92" badge={{ text: "4.7%", color: "bg-green-500" }} />
-        <StatsCard title="LAST 6 MONTHS" value="$5278.36" />
+        <StatsCard title="THIS MONTH FORECAST" value="$622.94" badge={{ text: "11.8%", color: "bg-green-500" }} />
+        <StatsCard title="LAST 6 MONTHS" value="$5653.38" />
       </div>
 
       {/* Action Buttons */}
