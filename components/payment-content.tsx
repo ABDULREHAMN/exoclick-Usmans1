@@ -106,12 +106,13 @@ export function PaymentContent({ onNavigate }: PaymentContentProps) {
       date: "30-07-2026",
       method: "Crypto (BEP20)",
       amount: "$2343.33",
-      status: "Pending",
+      status: "Completed",
       walletAddress: "<YOUR_BEP20_WALLET_ADDRESS>",
       walletNetwork: "BEP20",
       processingTime: "10–14 Business Days",
       grossAmount: "$2343.33",
       tax: "$0.00",
+      completedDate: "30-07-2026",
     },
   ])
 
